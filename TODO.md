@@ -1,0 +1,25 @@
+# TODO - Contact Form Email + Validation
+
+- [ ] Create backend `server/`:
+  - [ ] `server/package.json` with dependencies: express, nodemailer, zod, express-rate-limit, cors, sanitize-html
+  - [ ] `server/src/lib/email/transporter.ts` (Gmail SMTP via env vars)
+  - [ ] `server/src/lib/email/templates.ts` (luxury gold/black client + admin templates)
+  - [ ] `server/src/routes/send-contact.ts` (rate limiting, sanitization, validation, email sending)
+  - [ ] `server/src/index.ts` (Express app wiring + `/api/send-contact`)
+- [ ] Update frontend `src/pages/ContactPage.tsx`:
+  - [ ] Step-by-step validation gating (no advancing until required fields are valid)
+  - [ ] Real-time email/phone validation indicators
+  - [ ] Loading state during submission
+  - [ ] Table summary of all filled details for verification
+  - [ ] POST form data to backend API using `VITE_API_BASE_URL` (fallback to localhost)
+  - [ ] On success: move to confirmation step and keep WhatsApp fallback
+  - [ ] On error: show generic user-friendly message (no internal details)
+- [ ] Install backend dependencies and run:
+  - [ ] `npm install` in `server/`
+  - [ ] Start server and verify endpoint works
+- [ ] Quick manual test checklist:
+  - [ ] Cannot go to next step without required `*` fields
+  - [ ] Invalid email/phone prevents next step and shows indicator
+  - [ ] Confirmation table matches submitted payload
+  - [ ] Submitting sends email to owner via SMTP
+  - [ ] Rate limit: 4th submit within 1 minute blocked
