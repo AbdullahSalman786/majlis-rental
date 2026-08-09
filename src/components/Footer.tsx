@@ -108,7 +108,7 @@ export default function Footer() {
           }}
         >
           <p style={{ fontSize: '13px', color: 'var(--text-4)', fontWeight: 300 }}>
-            © {new Date().getFullYear()} Hookah Rental. All rights reserved.
+            © {new Date().getFullYear()} Hookah Rental. All rights reserved. Made by <a href="https://www.pakarabtechzone.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold)', textDecoration: 'none' }}>Pak Arab Tech Zone</a>.
           </p>
           <p style={{ fontSize: '13px', color: 'var(--text-4)', letterSpacing: '0.1em', fontWeight: 300 }}>
             Miami · Orlando
